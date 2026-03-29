@@ -1,5 +1,5 @@
 ---
-title: "DEN Color Palette v0.2/0.3"
+title: "DEN Color Palette v1.0"
 subtitle: "Quick Reference"
 format:
   pdf:
@@ -19,7 +19,7 @@ format:
 ```{=latex}
 \begin{table}[h]
 \centering
-\caption{DEN Data Visualization Color Palette (v0.2/0.3)}
+\caption{DEN Data Visualization Color Palette (v1.0)}
 \begin{tabular}{clllll}
 \toprule
 \textbf{Pos} & \textbf{Name} & \textbf{Hex} & \textbf{Tier} & \textbf{Source} & \textbf{Swatch} \\
@@ -64,4 +64,4 @@ format:
 
 \vspace{0.5cm}
 
-**Packages:** fig-den (Python, v0.2.0) and ggden (R, v0.3.0)
+**Packages:** [fig-den](https://github.com/den-econ/fig-den) (Python, v1.0), [ggden](https://github.com/den-econ/ggden) (R, v1.0), and [den-scheme](https://github.com/den-econ/den-scheme) (Stata, v1.0)

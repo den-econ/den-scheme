@@ -2,7 +2,7 @@
 *! DEN House Style Scheme for Stata
 *! Dewan Ekonomi Nasional Republik Indonesia
 *! Replicates the DEN house style from ggden (R) and fig-den (Python)
-*! Color palette v0.2/0.3 — 12 colors
+*! Color palette v1.0 — 12 colors
 
 #include s1color
 
@@ -138,7 +138,7 @@ color legend_line            white
 
 
 * ============================================================
-* DEN 12-COLOR PALETTE (v0.2/0.3)
+* DEN 12-COLOR PALETTE (v1.0)
 *
 *  Core:     1 Gold, 2 Dark Brown, 3 Red
 *  Standard: 4 Bright Gold, 5 Tan, 6 Dark Grey, 7 Deep Amber

@@ -24,7 +24,7 @@ To make it your default scheme across sessions:
 set scheme den, permanently
 ```
 
-## Color Palette (v0.2/0.3)
+## Color Palette (v1.0)
 
 12-color categorical palette in three tiers:
 
