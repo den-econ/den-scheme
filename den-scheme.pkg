@@ -1,0 +1,12 @@
+v 3
+d den-scheme: DEN house style scheme for Stata graphs
+d
+d Replicates the DEN house style from ggden (R) and fig-den (Python).
+d 12-color categorical palette with sequential and diverging colormaps.
+d
+d Author: Dewan Ekonomi Nasional Republik Indonesia
+d Support: https://github.com/den-econ/den-scheme
+d
+d Distribution-Date: 20260329
+d
+f scheme-den.scheme

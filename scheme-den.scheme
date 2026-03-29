@@ -1,0 +1,263 @@
+*! scheme-den.scheme  v1.0.0  29mar2026
+*! DEN House Style Scheme for Stata
+*! Dewan Ekonomi Nasional Republik Indonesia
+*! Replicates the DEN house style from ggden (R) and fig-den (Python)
+*! Color palette v0.2/0.3 — 12 colors
+
+#include s1color
+
+sequence 1300
+label "den"
+
+
+* ============================================================
+* GRAPH SIZE — approximate 10:6 aspect ratio
+* ============================================================
+
+graphsize x           7.5
+graphsize y           4.5
+
+
+* ============================================================
+* NUMBER STYLES
+* ============================================================
+
+numstyle pcycle            12
+numstyle legend_cols       0
+numstyle legend_rows       1
+
+
+* ============================================================
+* TEXT SIZES
+* ============================================================
+
+gsize heading              large
+gsize subheading           medlarge
+gsize body                 medsmall
+gsize small_body           small
+gsize axis_title           medsmall
+gsize label                medsmall
+gsize key_label            medsmall
+gsize tick_label           small
+gsize note                 small
+gsize text                 medsmall
+gsize title                large
+
+
+* ============================================================
+* BACKGROUNDS — all white
+* ============================================================
+
+color background           white
+color plotregion           white
+color plotregion_line      white
+color matrix_plotregion    white
+color matplotregion_line   white
+color legend               white
+color legend_line          white
+color clegend              white
+color clegend_outer        white
+color clegend_inner        white
+color clegend_line         white
+color box                  white
+color textbox              white
+color mat_label_box        white
+color bylabel_outline      white
+color heading_fill         white
+color reverse_big          white
+color reverse_big_line     white
+
+
+* ============================================================
+* TEXT COLORS
+* ============================================================
+
+* Title: dark grey (~grey10)
+color heading              "26 26 26"
+
+* Subtitle, axis titles, axis text, labels: grey30
+color subheading           "77 77 77"
+color body                 "77 77 77"
+color axis_title           "77 77 77"
+color tick_label           "77 77 77"
+color key_label            "77 77 77"
+color label                "77 77 77"
+
+* Caption/notes: grey50
+color small_body           "128 128 128"
+
+
+* ============================================================
+* AXIS STYLING — left and bottom only, grey30
+* ============================================================
+
+color axisline             "77 77 77"
+color tick                 "77 77 77"
+color minortick            "77 77 77"
+color tick_biglabel        "77 77 77"
+
+linewidth axisline         thin
+linewidth tick             thin
+
+yesno alt_xaxes            no
+yesno alt_yaxes            no
+
+
+* ============================================================
+* GRID — major gridlines on both axes, light grey, thin
+* (matches ggden panel.grid.major and fig-den axes.grid)
+* ============================================================
+
+color grid                 "230 230 230"
+color major_grid           "230 230 230"
+color minor_grid           "230 230 230"
+
+linewidth major_grid       thin
+linewidth minor_grid       thin
+linepattern major_grid     solid
+
+yesno draw_major_hgrid     yes
+yesno draw_minor_hgrid     no
+yesno draw_major_vgrid     yes
+yesno draw_minor_vgrid     no
+
+
+
+* ============================================================
+* LEGEND — top, horizontal, no frame
+* ============================================================
+
+clockdir legend_position     12
+clockdir by_legend_position  12
+numstyle legend_cols         0
+numstyle legend_rows         1
+yesno legend_col_first       no
+yesno legend_text_first      no
+yesno legend_force_keysz     no
+color legend_line            white
+
+
+* ============================================================
+* DEN 12-COLOR PALETTE (v0.2/0.3)
+*
+*  Core:     1 Gold, 2 Dark Brown, 3 Red
+*  Standard: 4 Bright Gold, 5 Tan, 6 Dark Grey, 7 Deep Amber
+*  Extended: 8 Light Gold, 9 Warm Sand, 10 Rose Brown,
+*            11 Rust, 12 Olive Tan
+* ============================================================
+
+* Default/base
+color p                    "238 192 81"
+
+* Core
+color p1                   "238 192 81"
+color p2                   "132 91 36"
+color p3                   "192 0 0"
+
+* Standard
+color p4                   "255 192 0"
+color p5                   "161 149 116"
+color p6                   "58 58 58"
+color p7                   "147 82 0"
+
+* Extended
+color p8                   "248 230 155"
+color p9                   "195 152 109"
+color p10                  "181 139 128"
+color p11                  "159 82 44"
+color p12                  "139 134 121"
+
+* Cycle: repeat after 12
+color p13                  "238 192 81"
+color p14                  "132 91 36"
+color p15                  "192 0 0"
+
+
+* ============================================================
+* LINE WIDTHS
+* ============================================================
+
+linewidth p                medthick
+linewidth pbar             thin
+linewidth pother           thin
+
+
+* ============================================================
+* INTENSITY
+* ============================================================
+
+intensity bar              inten80
+intensity bar_line         full
+intensity box              inten50
+intensity box_line         full
+intensity pie              inten80
+intensity p                inten80
+
+
+* ============================================================
+* HISTOGRAM
+* ============================================================
+
+color histogram            "238 192 81"
+color histogram_line       "132 91 36"
+linewidth histogram        vthin
+intensity histogram        inten80
+
+
+* ============================================================
+* REFERENCE LINES
+* ============================================================
+
+color xyline               "192 0 0"
+color refline              "58 58 58"
+linepattern xyline         dash
+linepattern refline        dash
+
+
+* ============================================================
+* CI AREA
+* ============================================================
+
+color ci_area              "238 192 81"
+intensity ci_area          inten30
+color ci_line              "238 192 81"
+color ci_arealine          "238 192 81"
+intensity ci_arealine      inten50
+color ci2_area             "132 91 36"
+intensity ci2_area         inten30
+color ci2_line             "132 91 36"
+color ci2_arealine         "132 91 36"
+intensity ci2_arealine     inten50
+
+
+* ============================================================
+* MARKER DEFAULTS
+* ============================================================
+
+symbol p                   circle
+symbolsize p               medium
+
+symbol p1                  circle
+symbol p2                  diamond
+symbol p3                  triangle
+symbol p4                  square
+symbol p5                  plus
+symbol p6                  x
+symbol p7                  circle_hollow
+symbol p8                  diamond_hollow
+symbol p9                  triangle_hollow
+symbol p10                 square_hollow
+symbol p11                 smcircle
+symbol p12                 smdiamond
+
+
+* ============================================================
+* MARGIN / SPACING
+* ============================================================
+
+margin heading             small
+margin subheading          small
+margin body                vsmall
+margin axis_title          small
+
+

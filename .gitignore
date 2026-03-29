@@ -38,6 +38,7 @@ build/
 *.run.xml
 *.synctex.gz
 *.toc
+!stata.toc
 *.xdv
 _quarto/
 .quarto/
@@ -76,3 +77,10 @@ desktop.ini
 .idea/
 *.sublime-project
 *.sublime-workspace
+
+# ── AI tooling ───────────────────────────────────────────────
+.claude/
+CLAUDE.md
+.claudeignore
+.cursorrules
+.cursorignore

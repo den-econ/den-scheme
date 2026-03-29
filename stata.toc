@@ -1,0 +1,6 @@
+v 3
+d DEN Scheme for Stata
+d Dewan Ekonomi Nasional Republik Indonesia (DEN)
+d DEN house style for Stata graphs, matching ggden (R) and fig-den (Python).
+d https://github.com/den-econ/den-scheme
+p den-scheme
