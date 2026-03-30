@@ -142,8 +142,8 @@ color legend_line            white
 *
 *  Core:     1 Gold, 2 Dark Brown, 3 Red
 *  Standard: 4 Bright Gold, 5 Tan, 6 Dark Grey, 7 Deep Amber
-*  Extended: 8 Light Gold, 9 Warm Sand, 10 Rose Brown,
-*            11 Rust, 12 Olive Tan
+*  Extended: 8 Slate Blue, 9 Muted Teal, 10 Dusty Rose,
+*            11 Rust, 12 Light Gold
 * ============================================================
 
 * Default/base
@@ -161,11 +161,11 @@ color p6                   "58 58 58"
 color p7                   "147 82 0"
 
 * Extended
-color p8                   "248 230 155"
-color p9                   "195 152 109"
-color p10                  "181 139 128"
+color p8                   "74 109 124"
+color p9                   "91 138 114"
+color p10                  "168 104 122"
 color p11                  "159 82 44"
-color p12                  "139 134 121"
+color p12                  "248 230 155"
 
 * Cycle: repeat after 12
 color p13                  "238 192 81"

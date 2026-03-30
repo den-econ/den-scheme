@@ -37,11 +37,11 @@ set scheme den, permanently
 | 5   | Tan         | `#A19574` | Standard |
 | 6   | Dark Grey   | `#3A3A3A` | Standard |
 | 7   | Deep Amber  | `#935200` | Standard |
-| 8   | Light Gold  | `#F8E69B` | Extended |
-| 9   | Warm Sand   | `#C3986D` | Extended |
-| 10  | Rose Brown  | `#B58B80` | Extended |
+| 8   | Slate Blue  | `#4A6D7C` | Extended |
+| 9   | Muted Teal  | `#5B8A72` | Extended |
+| 10  | Dusty Rose  | `#A8687A` | Extended |
 | 11  | Rust        | `#9F522C` | Extended |
-| 12  | Olive Tan   | `#8B8679` | Extended |
+| 12  | Light Gold  | `#F8E69B` | Extended |
 
 **Suggested usage:**
 
