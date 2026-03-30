@@ -106,5 +106,16 @@ histogram mpg, ///
 graph export "test/fig/test_hist.png", replace width(3000) height(1800)
 
 
+* ---- Test 9: Named colors (den1–den12) ----------------------
+sysuse auto, clear
+twoway (scatter mpg weight if foreign==0, mcolor(den1)) ///
+       (scatter mpg weight if foreign==1, mcolor(den3)), ///
+    title("Named Color Test") ///
+    subtitle("den1 = Gold, den3 = Red") ///
+    legend(label(1 "Domestic (den1)") label(2 "Foreign (den3)")) ///
+    name(test_named_colors, replace)
+graph export "test/fig/test_named_colors.png", replace width(3000) height(1800)
+
+
 * Done
 di as txt "All test charts exported to test/fig/"
