@@ -90,6 +90,47 @@ graph bar (mean) wage, over(race) asyvars ///
 | Stacked bar (4–6)    | `den1`, `den4`, `den2`, `den7` (light-dark alternation) |
 | Many categories (8+) | Full palette `den1`–`den12`               |
 
+### Supplementary colours (manual use)
+
+16 additional colours from the DEN PPT template and team preferences. These are **not** part of the auto-cycled scheme — use the codes (`den13`–`den28`) anywhere Stata accepts a colour name.
+
+| Pos | Code    | Name         | Hex       |
+|-----|---------|--------------|-----------|
+| 13  | `den13` | Cream        | `#FBEEC9` |
+| 14  | `den14` | Amber Gold   | `#F0A22E` |
+| 15  | `den15` | Ochre        | `#C87D0E` |
+| 16  | `den16` | Burnt Orange | `#C17529` |
+| 17  | `den17` | Raw Amber    | `#91581F` |
+| 18  | `den18` | Sand         | `#C3986D` |
+| 19  | `den19` | Caramel      | `#A27242` |
+| 20  | `den20` | Clay         | `#A5644E` |
+| 21  | `den21` | Chocolate    | `#7C4B3B` |
+| 22  | `den22` | Espresso     | `#4E3B30` |
+| 23  | `den23` | Dark Red     | `#820000` |
+| 24  | `den24` | Rose Brown   | `#B58B80` |
+| 25  | `den25` | Olive        | `#7C7154` |
+| 26  | `den26` | Medium Grey  | `#7F7F7F` |
+| 27  | `den27` | Steel        | `#70848F` |
+| 28  | `den28` | Navy Slate   | `#3E5064` |
+
+**Usage:**
+
+```stata
+* Use supplementary colour codes in scatter plots
+twoway scatter mpg weight, mcolor(den15)     // Ochre
+
+* Mix core and supplementary in bar charts
+graph bar (mean) wage, over(race) asyvars ///
+    bar(1, fcolor(den1))    ///   Gold (core)
+    bar(2, fcolor(den23))   ///   Dark Red (supplementary)
+    bar(3, fcolor(den28))       // Navy Slate (supplementary)
+
+* Mix core and supplementary in line charts
+twoway (line exports year, lcolor(den1))   ///
+       (line imports year, lcolor(den27)), ///   Steel
+    legend(label(1 "Exports") label(2 "Imports"))
+```
+
 ## Theme Details
 
 - **Background**: white (plot, legend, textbox)
